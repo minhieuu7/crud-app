@@ -19,13 +19,14 @@
         <td><img [src]="item.image" style="width: 100px; height: 70px;" alt=""></td>
         <td>{{item.category_name}}</td>
         <td>
-          <a routerLink="" (click)="onEdit()" class="btn btn-sm btn-warning mr-1" style="width: 50px; height: 36px;">Sửa</a>
+          <a routerLink="/product-edit/{{item.id}}" (click)="onEdit()" class="btn btn-sm btn-warning mr-1" style="width: 50px; height: 36px;">Sửa</a>
           <button class="btn btn-danger" (click)="deleteProduct(item.id)">Xóa</button>
         </td>
       </tr>
     </tbody>
   </table>
   <hr>
+
   <h4>Thêm Sản Phẩm</h4>
   <!-- form add -->
   <form (submit)="onSubmit()" [formGroup]="productForm" class="container mt-5">
@@ -51,3 +52,4 @@
     </div>
     <button type="submit" class="btn btn-primary">Thêm</button>
 </form>
+

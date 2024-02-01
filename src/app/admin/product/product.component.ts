@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -12,7 +13,7 @@ import { CommonModule } from '@angular/common';
   imports: [ReactiveFormsModule,  CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule],
+    HttpClientModule, RouterModule],
   providers: [ProductService],
 })
 export class ProductComponent implements OnInit {

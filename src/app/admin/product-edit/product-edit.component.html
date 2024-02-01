@@ -1,0 +1,25 @@
+<h1>Cập nhật sản phẩm</h1>
+<!-- form add -->
+<form (ngSubmit)="onUpdate()" [formGroup]="productFormEdit" class="container mt-5">
+  <div class="form-group">
+      <label for="productName">Tên sản phẩm</label>
+      <input type="text" class="form-control" id="productName" placeholder="Tên sản phẩm" formControlName="name">
+  </div>
+  <div class="form-group">
+      <label for="productPrice">Giá sản phẩm</label>
+      <input type="number" class="form-control" id="productPrice" placeholder="Giá sản phẩm" formControlName="price">
+  </div>
+  <div class="form-group">
+      <label for="productDescription">Mô tả sản phẩm</label>
+      <input type="text" class="form-control" id="productDescription" placeholder="Mô tả sản phẩm" formControlName="description">
+  </div>
+  <div class="form-group">
+      <label for="productImage">URL hình ảnh</label>
+      <input type="text" class="form-control" id="productImage" placeholder="URL hình ảnh" formControlName="image">
+  </div>
+  <div class="form-group">
+      <label for="productCategory">Tên danh mục</label>
+      <input type="text" class="form-control" id="productCategory" placeholder="Tên danh mục" formControlName="category_name">
+  </div>
+  <button type="submit" class="btn btn-primary">Cập Nhật</button>
+</form>
